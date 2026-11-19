@@ -1,4 +1,15 @@
 # Solar Filament Segmentation Challenge 2026: test-time augmentation and mask voting on two YOLO segmentation models
+## Repository
+
+| Path | Content |
+|---|---|
+| `filament_tta.py` | the method (prediction of the views, grouping, voting, ranking, selection, RLE output) |
+| `reproduce_submission.ipynb` | the whole pipeline on the test set, step by step on one image first |
+| `make_figures.py` | example segmentations for the report |
+| `models/` | the two model files (Git LFS), their licence and training settings |
+| `submission/` | the exact file submitted to Kaggle |
+| `figures/` | pipeline diagram and example segmentations |
+| `earlier_work/` | my own U-Net (public 0.38), not used in the final submission |
 
 Final submission `submission/submission_scale_stable.csv`: **public PQ 0.44, private PQ 0.42.**
 
@@ -82,17 +93,6 @@ GPU arithmetic is not bit-exact across hardware, so on another GPU a few masks m
 python make_figures.py --test-dir data/test/test_images
 ```
 
-## Repository
-
-| Path | Content |
-|---|---|
-| `filament_tta.py` | the method (prediction of the views, grouping, voting, ranking, selection, RLE output) |
-| `reproduce_submission.ipynb` | the whole pipeline on the test set, step by step on one image first |
-| `make_figures.py` | example segmentations for the report |
-| `models/` | the two model files (Git LFS), their licence and training settings |
-| `submission/` | the exact file submitted to Kaggle |
-| `figures/` | pipeline diagram and example segmentations |
-| `earlier_work/` | my own U-Net (public 0.38), not used in the final submission |
 
 ## Licences
 

@@ -55,16 +55,16 @@ images to them. Rotation in training was only ±10°: adding 90° rotated views 
 | Submission | Public PQ | Private PQ |
 |---|---|---|
 | The two models, original inference notebook (confidence 0.5, mask NMS) | 0.40 | – |
-| Same, images no longer skipped when only one model finds a filament | 0.40 | – |
-| 4 mirror views x 2 models at 2048 px, voting, 1317 filaments | 0.44 | – |
-| Same with 15 % more filaments (1515) | 0.43 | – |
-| 4 rotations x mirror (8 views) x 2 models, 1317 or 1218 filaments | 0.41 | – |
+| Same, images no longer skipped when only one model finds a filament | 0.40 | 0.40 |
+| 4 mirror views x 2 models at 2048 px, voting, 1317 filaments | 0.44 | 0.42 |
+| Same with 15 % more filaments (1515) | 0.43 | 0.41 |
+| Same with 15 % fewer filaments (1119) | 0.43 | 0.41 |
+| 4 rotations x mirror (8 views) x 2 models, 1317 or 1218 filaments | 0.41 | 0.39 |
 | 4 mirror views at 2048 px + stability ranking | 0.43 | 0.42 |
 | 4 mirror views at 2048 and 2560 px | 0.44 | 0.42 |
 | **4 mirror views at 2048 and 2560 px + stability ranking (final)** | **0.44** | **0.42** |
 
-Kaggle shows two decimals and each split has about 90 images, so differences of 0.01 are within noise. The clear
-effects are the mirror-view voting (+0.04) and the 90° rotations (-0.03).
+Kaggle shows two decimals and each split has about 90 images, so differences of 0.01 are within noise. The clear effects are the mirror-view voting (+0.04 public, +0.02 private) and the 90° rotations (0.39 private, below the original 0.40).
 
 ## Reproduce the submission
 

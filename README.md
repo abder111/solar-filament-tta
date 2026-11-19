@@ -72,8 +72,8 @@ Requirements: a CUDA GPU (about 95 minutes on one NVIDIA T4, 31 s per image), Py
 
 ```bash
 git lfs install
-git clone <this repository>
-cd <repository folder>
+git clone https://github.com/abder111/solar-filament-tta.git
+cd solar-filament-tta
 git lfs pull                      # the two model files (about 300 MB)
 pip install -r requirements.txt
 ```
